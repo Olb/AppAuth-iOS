@@ -51,6 +51,7 @@ static NSString *const kQueryStringParamAdditionalDisallowedCharacters = @"=&+";
         // As OAuth uses application/x-www-form-urlencoded encoding, interprets '+' as a space
         // in addition to regular percent decoding. https://url.spec.whatwg.org/#urlencoded-parsing
         NSLog(@"Components: %@", components.path);
+        assert(false);
         if ([components.path containsString:@"#"]) {
           NSLog(@"Containts #: try removing");
           components.path = [components.path stringByReplacingOccurrencesOfString:@"#" withString:@""];
