@@ -63,7 +63,7 @@ static NSString *const kQueryStringParamAdditionalDisallowedCharacters = @"=&+";
               NSArray<NSURLQueryItem *> *queryItems = components.queryItems;
               for (NSURLQueryItem *queryItem in queryItems) {
                 if ([queryItem.name isEqualToString:@"state"]) {
-                  [self addParameter:@"_authorizationCode" value:queryItem.value];
+                  [self addParameter:@"code" value:queryItem.value];
                   [self addParameter:@"data[attributes][assertion]" value:queryItem.value];
                   [self addParameter:@"state" value:@""];
 
